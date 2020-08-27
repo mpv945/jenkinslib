@@ -54,7 +54,7 @@ pipeline {
                                 mvnHome = tool "apache-maven-3.6.3"
                                 println(mvnHome)
                                 
-                                sh "${mvnHome}/bin/mvn --version"
+                                //sh "${mvnHome}/bin/mvn --version"
                             }
                         }
                     }
