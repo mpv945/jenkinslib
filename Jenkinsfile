@@ -41,10 +41,11 @@ pipeline {
         
         stage('Build01') {
             withMaven(maven: 'apache-maven-3.6.3',
-                  mavenOpts: '-Xmx1g -XX:MaxPermSize=256m -XX:+CMSClassUnloadingEnabled',
+                  mavenOpts: '-Xmx1g -XX:MaxPermSize=256m -XX:+CMSClassUnloadingEnabled'
                   //jdk: 'JDK-1.8',
                   //globalMavenSettingsConfig: "${efx_settings}"){ // 全局弄了一个settings.xml， Settings.xml 的ID来的
-                  globalMavenSettingsConfig: ""){
+                  //globalMavenSettingsConfig: ""){
+		  ){
                       try{
                           //notifyBitbucket() //tifies the Stash Instance of an INPROGRESS build
                           //sh "mvn -B clean install -Drevision=\"${revision}\""
