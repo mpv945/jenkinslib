@@ -50,7 +50,8 @@ pipeline {
                             script{
                                 println('应用打包')
                                 tools.PrintMes("应用打包",'green')
-                                mvnHome = tool "m2"
+                                //mvnHome = tool "m2"
+                                mvnHome = tool "apache-maven-3.6.3"
                                 println(mvnHome)
                                 
                                 sh "${mvnHome}/bin/mvn --version"
